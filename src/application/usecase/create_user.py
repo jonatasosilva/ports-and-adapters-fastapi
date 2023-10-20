@@ -19,6 +19,6 @@ class CreateUser:
         self.user_repository = user_repository
 
     def execute(self, input: Input) -> Output:
-        user = User(input.name)
+        user = User(name=input.name)
         user_id = self.user_repository.create(user)
         return Output(user_id)
